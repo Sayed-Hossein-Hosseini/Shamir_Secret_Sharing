@@ -12,7 +12,14 @@ public class ShamirSecretSharing {
             coefficients[i] = new BigInteger(p, random);
         }
 
-
+        // Calculation of shares
+        for (int i = 1; i <= n; i++) {
+            BigInteger share = secret;
+            for (int j = 1; j < t; j++) {
+                share = share.multiply(BigInteger.valueOf(i).modPow(BigInteger.valueOf(j), BigInteger.valueOf(p)));
+            }
+            shares[i - 1] = share.mod(BigInteger.valueOf(p));
+        }
 
         return shares;
     }
