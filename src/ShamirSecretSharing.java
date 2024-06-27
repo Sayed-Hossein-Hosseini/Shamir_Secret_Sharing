@@ -50,7 +50,15 @@ public class ShamirSecretSharing {
             }
         }
 
-        return null;
+        // بازسازی راز
+        BigInteger secret = BigInteger.ZERO;
+        for (int i = 0; i < t; i++) {
+            secret = secret.add(
+                    shares[i].multiply(coefficients[i]).mod(BigInteger.valueOf(p))
+            ).mod(BigInteger.valueOf(p));
+        }
+
+        return secret;
     }
 
     public BigInteger[] getShares() {
