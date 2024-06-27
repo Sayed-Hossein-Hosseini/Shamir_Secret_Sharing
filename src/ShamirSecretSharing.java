@@ -36,6 +36,20 @@ public class ShamirSecretSharing {
         if (shares.length < t) {
             return null;
         }
+
+        // Calculation of Langerage coefficients
+        BigInteger[] coefficients = new BigInteger[t];
+        for (int i = 0; i < t; i++) {
+            coefficients[i] = BigInteger.ONE;
+            for (int j = 0; j < t; j++) {
+                if (i != j) {
+                    coefficients[i] = coefficients[i].multiply(
+                            (shares[j].subtract(BigInteger.valueOf(i))).modInverse(BigInteger.valueOf(p))
+                    ).mod(BigInteger.valueOf(p));
+                }
+            }
+        }
+
         return null;
     }
 
