@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShamirSecretSharing.iml" afterDir="false" />
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="The ShamirSecretSharing class is completed to generate the share">
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +12,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ShamirSecretSharing.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,8 +68,51 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719487271895</updated>
-      <workItem from="1719487278742" duration="745000" />
+      <workItem from="1719487278742" duration="2511000" />
     </task>
+    <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
+      <created>1719489337108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719489337108</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create ShamirSecretSharing Class">
+      <created>1719489364103</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719489364103</updated>
+    </task>
+    <task id="LOCAL-00003" summary="create generateShares Method">
+      <created>1719489513950</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719489513950</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Selection of random coefficients">
+      <created>1719489563502</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719489563502</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Calculation of shares">
+      <created>1719489606733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719489606733</updated>
+    </task>
+    <task id="LOCAL-00006" summary="The ShamirSecretSharing class is completed to generate the share">
+      <created>1719490671366</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719490671366</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,5 +128,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create Shamir Secret Sharing Project" />
+    <MESSAGE value="create ShamirSecretSharing Class" />
+    <MESSAGE value="create generateShares Method" />
+    <MESSAGE value="Selection of random coefficients" />
+    <MESSAGE value="Calculation of shares" />
+    <MESSAGE value="The ShamirSecretSharing class is completed to generate the share" />
+    <option name="LAST_COMMIT_MESSAGE" value="The ShamirSecretSharing class is completed to generate the share" />
   </component>
 </project>
