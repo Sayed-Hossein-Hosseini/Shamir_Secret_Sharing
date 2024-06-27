@@ -2,11 +2,13 @@ import java.math.BigInteger;
 import java.util.Random;
 
 public class ShamirSecretSharing {
-    private BigInteger[] shares ;
+    private BigInteger[] shares;
+    BigInteger secret;
 
     public ShamirSecretSharing(BigInteger secret, int n, int t, int p) {
         shares = generateShares(secret, n, t, p);
     }
+
     private static BigInteger[] generateShares(BigInteger secret, int n, int t, int p) {
         BigInteger[] shares = new BigInteger[n];
         Random random = new Random();
@@ -27,6 +29,14 @@ public class ShamirSecretSharing {
         }
 
         return shares;
+    }
+
+    private static BigInteger recoverSecret(BigInteger[] shares, int t, int p) {
+        // Checking whether the number of shares is sufficient or not
+        if (shares.length < t) {
+            return null;
+        }
+        return null;
     }
 
     public BigInteger[] getShares() {
