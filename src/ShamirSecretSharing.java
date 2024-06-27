@@ -2,6 +2,11 @@ import java.math.BigInteger;
 import java.util.Random;
 
 public class ShamirSecretSharing {
+    private BigInteger[] shares ;
+
+    public ShamirSecretSharing(BigInteger secret, int n, int t, int p) {
+        shares = generateShares(secret, n, t, p);
+    }
     private static BigInteger[] generateShares(BigInteger secret, int n, int t, int p) {
         BigInteger[] shares = new BigInteger[n];
         Random random = new Random();
@@ -21,6 +26,10 @@ public class ShamirSecretSharing {
             shares[i - 1] = share.mod(BigInteger.valueOf(p));
         }
 
+        return shares;
+    }
+
+    public BigInteger[] getShares() {
         return shares;
     }
 }
