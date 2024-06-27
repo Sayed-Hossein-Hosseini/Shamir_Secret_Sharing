@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="The ShamirSecretSharing class is completed to generate the share">
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class">
       <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/ShamirSecretRecovery.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/ShamirSecretSharing.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -68,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719487271895</updated>
-      <workItem from="1719487278742" duration="2511000" />
+      <workItem from="1719487278742" duration="9455000" />
     </task>
     <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
       <created>1719489337108</created>
@@ -112,7 +115,35 @@
       <option name="project" value="LOCAL" />
       <updated>1719490671366</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create recoverSecret Method">
+      <created>1719491802814</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719491802814</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Calculation of Langerage coefficients">
+      <created>1719491875615</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719491875615</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Reconstruction of the secret">
+      <created>1719491960908</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719491960908</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class">
+      <created>1719492333596</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719492333596</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +167,10 @@
     <MESSAGE value="Selection of random coefficients" />
     <MESSAGE value="Calculation of shares" />
     <MESSAGE value="The ShamirSecretSharing class is completed to generate the share" />
-    <option name="LAST_COMMIT_MESSAGE" value="The ShamirSecretSharing class is completed to generate the share" />
+    <MESSAGE value="create recoverSecret Method" />
+    <MESSAGE value="Calculation of Langerage coefficients" />
+    <MESSAGE value="Reconstruction of the secret" />
+    <MESSAGE value="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class" />
   </component>
 </project>
