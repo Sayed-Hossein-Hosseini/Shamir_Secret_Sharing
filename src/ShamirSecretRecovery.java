@@ -19,16 +19,19 @@ public class ShamirSecretRecovery {
             coefficients[i] = BigInteger.ONE;
             for (int j = 0; j < t; j++) {
                 if (i != j) {
-                    // محاسبه معکوس (shares[j].subtract(BigInteger.valueOf(i)))
-                    BigInteger inverse = extendedEuclidean(shares[j].subtract(BigInteger.valueOf(i)), BigInteger.valueOf(p)).getFirst();
+                    // Ensure positive difference for modular inverse calculation
+                    BigInteger difference = shares[j].subtract(BigInteger.valueOf(i));
 
-                    // بررسی اینکه آیا b اول است یا خیر
+                    // Consider using a library for extendedEuclidean
+                    BigInteger inverse = extendedEuclidean(difference, BigInteger.valueOf(p)).getFirst();
+
+                    // Check if the inverse is null (not possible to recover)
                     if (inverse == null) {
-                        System.out.println("بازسازی راز با این سهم ها امکان پذیر نیست (b اول نیست).");
+                        System.out.println("Secret reconstruction is not possible with these shares (b is not prime).");
                         return null;
                     }
 
-                    // ضرب ضریب با معکوس
+                    // Update the coefficient with the product of inverse and current coefficient
                     coefficients[i] = coefficients[i].multiply(inverse).mod(BigInteger.valueOf(p));
                 }
             }
@@ -37,7 +40,7 @@ public class ShamirSecretRecovery {
         // Reconstruction of the secret
         BigInteger secret = BigInteger.ZERO;
         for (int i = 0; i < t; i++) {
-            // محاسبه دستی حاصلضرب ضرایب لانژراژ
+            // Calculate the product of other Langerage coefficients
             BigInteger product = coefficients[i];
             for (int j = 0; j < t; j++) {
                 if (i != j) {
@@ -45,7 +48,7 @@ public class ShamirSecretRecovery {
                 }
             }
 
-            // ضرب سهم با حاصلضرب ضرایب
+            // Add the product of share and product of coefficients to the secret
             secret = secret.add(shares[i].multiply(product).mod(BigInteger.valueOf(p))).mod(BigInteger.valueOf(p));
         }
 
@@ -56,7 +59,7 @@ public class ShamirSecretRecovery {
         return secret;
     }
 
-    // پیاده سازی الگوریتم اقلیدس گسترده
+    // Implementation of extended Euclid algorithm
     private static Pair<BigInteger, BigInteger> extendedEuclidean(BigInteger a, BigInteger b) {
         BigInteger q, r, x, y, x0, y0;
 
@@ -79,10 +82,10 @@ public class ShamirSecretRecovery {
             y0 = y;
         }
 
-        return new Pair<>(y, x0); // (معکوس b، x)
+        return new Pair<>(y, x0); // (inverse b, x)
     }
 
-    // کلاس برای ذخیره مقادیر x و y
+    // Class to store x and y values
     private static class Pair<T1, T2> {
         private final T1 first;
         private final T2 second;

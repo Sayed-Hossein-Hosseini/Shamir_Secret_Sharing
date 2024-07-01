@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class">
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="The project is completed and testing and evaluation can be done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" afterDir="false" />
     </list>
@@ -37,18 +36,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -71,7 +70,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719487271895</updated>
-      <workItem from="1719487278742" duration="9455000" />
+      <workItem from="1719487278742" duration="13756000" />
+      <workItem from="1719839797162" duration="2264000" />
     </task>
     <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
       <created>1719489337108</created>
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719492333596</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="The project is completed and testing and evaluation can be done">
+      <created>1719499478938</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719499478938</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +178,7 @@
     <MESSAGE value="Calculation of Langerage coefficients" />
     <MESSAGE value="Reconstruction of the secret" />
     <MESSAGE value="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Transfer recovery methods to the appropriate class and complete the password sharing and recovery class" />
+    <MESSAGE value="The project is completed and testing and evaluation can be done" />
+    <option name="LAST_COMMIT_MESSAGE" value="The project is completed and testing and evaluation can be done" />
   </component>
 </project>
