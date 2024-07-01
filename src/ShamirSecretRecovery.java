@@ -3,63 +3,52 @@ import java.math.BigInteger;
 public class ShamirSecretRecovery {
     BigInteger secret;
 
-    public ShamirSecretRecovery(BigInteger[] shares, int t, int p) { // ShamirSecretRecovery
+    public ShamirSecretRecovery(BigInteger[] shares, int t, int p) {
         secret = recoverSecret(shares, t, p);
     }
 
     private static BigInteger recoverSecret(BigInteger[] shares, int t, int p) {
-        // Checking whether the number of shares is sufficient or not
+        // بررسی اینکه تعداد قسمت‌ها کافی است یا نه
         if (shares.length < t) {
+            System.out.println("تعداد قسمت‌ها کافی نیست.");
             return null;
         }
 
-        // Calculation of Langerage coefficients
+        // محاسبه ضرایب لانگرانژ
         BigInteger[] coefficients = new BigInteger[t];
         for (int i = 0; i < t; i++) {
             coefficients[i] = BigInteger.ONE;
             for (int j = 0; j < t; j++) {
                 if (i != j) {
-                    // Ensure positive difference for modular inverse calculation
                     BigInteger difference = shares[j].subtract(BigInteger.valueOf(i));
-
-                    // Consider using a library for extendedEuclidean
                     BigInteger inverse = extendedEuclidean(difference, BigInteger.valueOf(p)).getFirst();
 
-                    // Check if the inverse is null (not possible to recover)
                     if (inverse == null) {
-                        System.out.println("Secret reconstruction is not possible with these shares (b is not prime).");
+                        System.out.println("بازیابی راز با این قسمت‌ها امکان‌پذیر نیست (b عدد اول نیست).");
                         return null;
                     }
 
-                    // Update the coefficient with the product of inverse and current coefficient
                     coefficients[i] = coefficients[i].multiply(inverse).mod(BigInteger.valueOf(p));
                 }
             }
         }
 
-        // Reconstruction of the secret
+        // بازیابی راز
         BigInteger secret = BigInteger.ZERO;
         for (int i = 0; i < t; i++) {
-            // Calculate the product of other Langerage coefficients
             BigInteger product = coefficients[i];
             for (int j = 0; j < t; j++) {
                 if (i != j) {
                     product = product.multiply(coefficients[j]).mod(BigInteger.valueOf(p));
                 }
             }
-
-            // Add the product of share and product of coefficients to the secret
             secret = secret.add(shares[i].multiply(product).mod(BigInteger.valueOf(p))).mod(BigInteger.valueOf(p));
         }
 
         return secret;
     }
 
-    public BigInteger getSecret() {
-        return secret;
-    }
-
-    // Implementation of extended Euclid algorithm
+    // پیاده‌سازی الگوریتم اوکلید گسترده
     private static Pair<BigInteger, BigInteger> extendedEuclidean(BigInteger a, BigInteger b) {
         BigInteger q, r, x, y, x0, y0;
 
@@ -82,10 +71,10 @@ public class ShamirSecretRecovery {
             y0 = y;
         }
 
-        return new Pair<>(y, x0); // (inverse b, x)
+        return new Pair<>(y, x0); // (معکوس b، x)
     }
 
-    // Class to store x and y values
+    // کلاس برای ذخیره مقادیر x و y
     private static class Pair<T1, T2> {
         private final T1 first;
         private final T2 second;
@@ -102,5 +91,21 @@ public class ShamirSecretRecovery {
         public T2 getSecond() {
             return second;
         }
+    }
+
+    public BigInteger getSecret() {
+        return secret;
+    }
+
+    public static void main(String[] args) {
+        // مثال استفاده:
+        BigInteger[] shares = { BigInteger.valueOf(87), BigInteger.valueOf(60), BigInteger.valueOf(81),
+                BigInteger.valueOf(15), BigInteger.valueOf(123) };
+        int t = 4;
+        int p = 153;
+
+        ShamirSecretRecovery recovery = new ShamirSecretRecovery(shares, t, p);
+        BigInteger recoveredSecret = recovery.getSecret();
+        System.out.println("رمز بازیابی شده: " + recoveredSecret);
     }
 }
