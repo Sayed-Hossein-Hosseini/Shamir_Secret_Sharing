@@ -33,7 +33,7 @@ public class ShamirSecretRecovery {
             }
         }
 
-        // بازیابی راز
+        // recovery secret
         BigInteger secret = BigInteger.ZERO;
         for (int i = 0; i < t; i++) {
             BigInteger product = coefficients[i];

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="The project is completed and Editing">
-      <change afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Create User Interface Class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/ShamirSecretRecovery.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/ShamirSecretSharing.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/UserInterface.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -49,7 +50,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ShamirSecretRecovery">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="ShamirSecretSharing" />
@@ -57,8 +58,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShamirSecretRecovery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ShamirSecretRecovery" />
+      <module name="ShamirSecretSharing" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShamirSecretRecovery" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -74,7 +83,7 @@
       <workItem from="1719487278742" duration="13756000" />
       <workItem from="1719839797162" duration="6011000" />
       <workItem from="1719914417765" duration="1228000" />
-      <workItem from="1719918736325" duration="1413000" />
+      <workItem from="1719918736325" duration="2476000" />
     </task>
     <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
       <created>1719489337108</created>
@@ -167,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719847440282</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create User Interface Class">
+      <created>1719920229953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1719920229953</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +214,7 @@
     <MESSAGE value="The project is completed and testing and evaluation can be done" />
     <MESSAGE value="The project is completed" />
     <MESSAGE value="The project is completed and Editing" />
-    <option name="LAST_COMMIT_MESSAGE" value="The project is completed and Editing" />
+    <MESSAGE value="Create User Interface Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create User Interface Class" />
   </component>
 </project>
