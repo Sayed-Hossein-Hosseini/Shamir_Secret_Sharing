@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Complete the password recovery section">
-      <change beforePath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Complete the project" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +81,7 @@
       <workItem from="1719914417765" duration="1228000" />
       <workItem from="1719918736325" duration="2495000" />
       <workItem from="1719927067710" duration="1797000" />
-      <workItem from="1719950771067" duration="2317000" />
+      <workItem from="1719950771067" duration="2673000" />
     </task>
     <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
       <created>1719489337108</created>
@@ -205,7 +202,28 @@
       <option name="project" value="LOCAL" />
       <updated>1719960569344</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Complete the user interface section">
+      <created>1719960853444</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1719960853444</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Complete the user interface section">
+      <created>1719960985927</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1719960985927</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Complete the project">
+      <created>1719961029951</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1719961029951</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +258,8 @@
     <MESSAGE value="Completing the user interface class and creating a beautiful design for the menu" />
     <MESSAGE value="Completing the secret sharing section" />
     <MESSAGE value="Complete the password recovery section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete the password recovery section" />
+    <MESSAGE value="Complete the user interface section" />
+    <MESSAGE value="Complete the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the project" />
   </component>
 </project>
