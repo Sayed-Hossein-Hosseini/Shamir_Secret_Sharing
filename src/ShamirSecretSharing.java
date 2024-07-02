@@ -1,36 +1,38 @@
 import java.math.BigInteger;
-import java.util.Random;
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShamirSecretSharing {
-    private BigInteger[] shares;
+    private final BigInteger prime;
+    private final SecureRandom random;
 
-    public ShamirSecretSharing(BigInteger secret, int n, int t, int p) { // Shamir Secret Sharing
-        shares = generateShares(secret, n, t, p);
+    public ShamirSecretSharing(BigInteger prime) {
+        this.prime = prime;
+        this.random = new SecureRandom();
     }
 
-    private static BigInteger[] generateShares(BigInteger secret, int n, int t, int p) {
-        BigInteger[] shares = new BigInteger[n];
-        Random random = new Random();
+    public List<BigInteger[]> splitSecret(BigInteger secret, int n, int t) {
+        if (n < t) {
+            throw new IllegalArgumentException("Error: n must be greater than or equal to t.");
+        }
 
-        // Selection of random coefficients
+        List<BigInteger[]> shares = new ArrayList<>();
         BigInteger[] coefficients = new BigInteger[t - 1];
+
         for (int i = 0; i < t - 1; i++) {
-            coefficients[i] = new BigInteger(p, random);
+            coefficients[i] = new BigInteger(prime.bitLength(), random).mod(prime);
         }
 
-        // Calculation of shares
         for (int i = 1; i <= n; i++) {
-            BigInteger share = secret;
-            for (int j = 1; j < t; j++) {
-                share = share.multiply(BigInteger.valueOf(i).modPow(BigInteger.valueOf(j), BigInteger.valueOf(p)));
+            BigInteger x = BigInteger.valueOf(i);
+            BigInteger y = secret;
+
+            for (int j = 0; j < t - 1; j++) {
+                y = y.add(coefficients[j].multiply(x.pow(j + 1))).mod(prime);
             }
-            shares[i - 1] = share.mod(BigInteger.valueOf(p));
+            shares.add(new BigInteger[]{x, y});
         }
-
-        return shares;
-    }
-
-    public BigInteger[] getShares() {
         return shares;
     }
 }
