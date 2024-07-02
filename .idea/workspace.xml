@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShamirSecretSharing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShamirSecretSharing.java" afterDir="false" />
+    <list default="true" id="25a201fb-a203-4488-a92b-c0974c038872" name="Changes" comment="Complete the password recovery section">
+      <change beforePath="$PROJECT_DIR$/src/ShamirSecretRecovery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/ShamirSecretRecovery.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/SecretRecovery.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/ShamirSecretSharing.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/UserInterface.java" root0="SKIP_INSPECTION" />
   </component>
@@ -84,7 +84,7 @@
       <workItem from="1719914417765" duration="1228000" />
       <workItem from="1719918736325" duration="2495000" />
       <workItem from="1719927067710" duration="1797000" />
-      <workItem from="1719950771067" duration="1903000" />
+      <workItem from="1719950771067" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="create Shamir Secret Sharing Project">
       <created>1719489337108</created>
@@ -191,7 +191,21 @@
       <option name="project" value="LOCAL" />
       <updated>1719927936152</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Completing the secret sharing section">
+      <created>1719960438767</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719960438767</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Complete the password recovery section">
+      <created>1719960569344</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719960569344</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +238,8 @@
     <MESSAGE value="The project is completed and Editing" />
     <MESSAGE value="Create User Interface Class" />
     <MESSAGE value="Completing the user interface class and creating a beautiful design for the menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completing the user interface class and creating a beautiful design for the menu" />
+    <MESSAGE value="Completing the secret sharing section" />
+    <MESSAGE value="Complete the password recovery section" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete the password recovery section" />
   </component>
 </project>
