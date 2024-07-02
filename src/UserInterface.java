@@ -36,10 +36,14 @@ public class UserInterface {
                     break;
 
                 case 3:
+                    System.out.println("\n**************************************************\n"
+                            + "*               I hope you enjoyed               *\n"
+                            + "*       ->         GOOD LUCK :)        <-        *\n"
+                            + "**************************************************");
                     System.exit(0);
 
                 default:
-                    System.out.println("");
+                    System.out.println("\n! Invalid !\n" + "*Try again*");
             }
         }
     }
