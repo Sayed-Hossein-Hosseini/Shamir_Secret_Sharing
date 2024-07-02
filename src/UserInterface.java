@@ -1,8 +1,12 @@
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-    public static void main() {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("**************************************************\n"
                 + "*      Welcome to Shamir Secret Scheme (SSS)     *\n"
                 + "*                   Professor                    *\n"
@@ -10,11 +14,6 @@ public class UserInterface {
                 + "*                   Programmer                   *\n"
                 + "*          Eng. Sayyed Hossein Hosseini          *\n"
                 + "**************************************************");
-        executive();
-    }
-
-    private static void executive() {
-        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("\n**************************************************\n"
@@ -26,85 +25,84 @@ public class UserInterface {
 
             System.out.print("Choose your option from the menu : ");
 
-            switch (scanner.nextInt()) {
+            int choice = scanner.nextInt();
+
+            switch (choice) {
                 case 1:
-                    shamirSecretShares();
+                    splitSecretOption(scanner);
                     break;
-
                 case 2:
-                    ShamirSecretRecovery();
+                    recoverSecretOption(scanner);
                     break;
-
                 case 3:
                     System.out.println("\n**************************************************\n"
                             + "*               I hope you enjoyed               *\n"
                             + "*       ->         GOOD LUCK :)        <-        *\n"
                             + "**************************************************");
+                    scanner.close();
                     System.exit(0);
-
                 default:
-                    System.out.println("\n! Invalid !\n" + "*Try again*");
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
 
-    private static void shamirSecretShares() {
-        // Get Inputs
-        Scanner scanner = new Scanner(System.in);
+    private static void splitSecretOption(Scanner scanner) {
+        System.out.println("Enter the prime number p:");
+        BigInteger prime = scanner.nextBigInteger();
 
-        // Receive inputs from the user
-        System.out.print("Enter the number of shares (n): ");
+        System.out.println("Enter the number of shares n:");
         int n = scanner.nextInt();
 
-        System.out.print("Enter the number of people (t): ");
+        System.out.println("Enter the threshold t:");
         int t = scanner.nextInt();
 
-        System.out.print("Enter the calculation unit (p): ");
-        int p = scanner.nextInt();
+        System.out.println("Enter the secret number s:");
+        BigInteger secret = scanner.nextBigInteger();
 
-        System.out.print("Enter the secret (as a number): ");
-        BigInteger secret = new BigInteger(scanner.next());
+        if (n < t) {
+            System.out.println("Error: n must be greater than or equal to t.");
+            return;
+        }
 
-        // Generate Shares
-        ShamirSecretSharing shamirSecretSharing = new ShamirSecretSharing(secret, n, t, p);
+        if (!prime.isProbablePrime(10)) {
+            System.out.println("Error: p must be a prime number.");
+            return;
+        }
 
-        // Show Shares
-        BigInteger[] shares = shamirSecretSharing.getShares();
-        System.out.println("Shares : ");
-        for (int i = 1; i <= n; i++) {
-            System.out.println("Share " + i + ": " + shares[i - 1]);
+        if (secret.compareTo(prime) >= 0) {
+            System.out.println("Error: s must be less than p.");
+            return;
+        }
+
+        ShamirSecretSharing sss = new ShamirSecretSharing(prime);
+        List<BigInteger[]> shares = sss.splitSecret(secret, n, t);
+
+        System.out.println("Generated Shares:");
+        for (BigInteger[] share : shares) {
+            System.out.println("(" + share[0] + ", " + share[1] + ")");
         }
     }
 
-    private static void ShamirSecretRecovery() {
-        Scanner scanner = new Scanner(System.in);
+    private static void recoverSecretOption(Scanner scanner) {
+        System.out.println("Enter the prime number p:");
+        BigInteger prime = scanner.nextBigInteger();
 
-        // Receive inputs from the user
-        System.out.print("Enter the number of shares (n): ");
-        int n = scanner.nextInt();
-
-        System.out.print("Enter the number of people (t): ");
+        System.out.println("Enter the number of shares t:");
         int t = scanner.nextInt();
 
-        System.out.print("Enter the calculation unit (p): ");
-        int p = scanner.nextInt();
+        List<BigInteger[]> shares = new ArrayList<>();
 
-        // Get Shares
-        BigInteger[] shares = new BigInteger[n];
-        for (int i = 1; i <= n; i++) {
-            System.out.print("Share " + i + " : ");
-            shares[i - 1] = new BigInteger(scanner.next());
+        for (int i = 0; i < t; i++) {
+            System.out.println("Enter x and y for share " + (i + 1) + ":");
+            BigInteger x = scanner.nextBigInteger();
+            BigInteger y = scanner.nextBigInteger();
+            shares.add(new BigInteger[]{x, y});
         }
 
-        // Reconstruction of the secret
-        ShamirSecretRecovery shamirSecretRecovery = new ShamirSecretRecovery(shares, t, p);
-        BigInteger secret = shamirSecretRecovery.getSecret();
+        SecretRecovery sr = new SecretRecovery(prime);
+        BigInteger reconstructedSecret = sr.reconstructSecret(shares);
 
-        // secret show
-        if (secret != null) {
-            System.out.println("Secret: " + secret);
-        } else {
-            System.out.println("It is not possible to restore the secret with these shares.");
-        }
+        System.out.println("Reconstructed Secret: " + reconstructedSecret);
     }
 }
