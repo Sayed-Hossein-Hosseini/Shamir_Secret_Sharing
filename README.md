@@ -1,9 +1,3 @@
-Certainly! Here are all the explanations from the last response, formatted in Markdown.
-
----
-
-### Project Overview in Markdown
-
 # Shamir's Secret Sharing Project
 
 ## Introduction
