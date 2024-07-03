@@ -1,5 +1,3 @@
 public class Main {
-    public static void main(String[] args) {
-        UserInterface.main();
-    }
+    public static void main(String[] args) { UserInterface.main(); }
 }
